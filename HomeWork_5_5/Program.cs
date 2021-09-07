@@ -12,15 +12,15 @@ namespace HomeWork_5_5
         /// <returns></returns>
         static int functionAkkerman(int n, int m)
         {
-            if (m == 0)
-            {
-                return n + 1;
-            }
-            if (n == 0)
-            {
-                return m + 1;
-            }
-            return functionAkkerman(m - 1, functionAkkerman(m, n - 1));
+                if (m == 0)
+                {
+                    return n + 1;
+                }
+                if (n == 0)
+                {
+                    return functionAkkerman(m - 1, 1);
+                }
+                return functionAkkerman(m - 1, functionAkkerman(m, n - 1));
         }
         static void Main(string[] args)
         {
